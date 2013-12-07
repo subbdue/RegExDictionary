@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RegEx Dictionary Search</title>
+    <meta name="author" content="Subbdue" />
+    <meta charset="utf-8" />
+
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://jquery-csv.googlecode.com/git/src/jquery.csv.js"></script>
+</head>
+
+<body>
+    <!--From Dutchie's answer-->
+    <!--http://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page -->
+    <form name="srchform" onsubmit="searchDict2()" action="javascript:void(0);">
+        <input type="text" name="entry"><p>
+        <!--<input type="button" value="Submit" onclick="loadDict(this.form)">-->
+        <input type="button" value="Submit" onclick="searchDict(this.form)">
+    </form>
+
+    <p id="results">xyz</p>
+    <h4>Result:</h4>
+    <div class=result>
+      <table id=result1 border=1></table>
+    </div>
+
+	<script src="dict.js"></script>
+</body>
+</html>
