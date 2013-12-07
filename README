@@ -11,16 +11,17 @@ http://regexdict.s3-website-us-west-2.amazonaws.com/
 How?
 ====
 Search  - Result
-------   ------
-ball    - All words with the "ball" in it
+------    ------
+ball    - All words with the word "ball" in it
 ^ball   - All words that start with the word "ball"
 ball$   - All words that end with "ball"
 ^ball$  - Searches exactly for the word "ball"
-^.all$  - Search for all 4 letter words with any character in its first position, and 'all' in the 2,3,4 positions.
-          Similarly search for ^.a.l$ for all 4 letter words with 'a' and 'l' in the 2nd and 4th position
-          respectively.  
-^d...h$ - Search for a word that starts with 'd', ends with 'h', and has 3 characters between them. 
-          If you have a setup such as "D___H" on the scrabble board, this will find all word combinations for you.
+^.all$  - Search for all 4 letter words with any character in its first position,
+          and 'all' in the 2,3,4 positions. Similarly, search for "^.a.l$" for all 
+          4 letter words with 'a' and 'l' in the 2nd and 4th position respectively.  
+^d...h$ - Search for a word that starts with 'd', ends with 'h', and has 3 characters 
+          between them. If you have a setup such as "D___H" on the scrabble board, 
+          this will find all word combinations for you.
 
 Misc
 ====
