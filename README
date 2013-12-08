@@ -20,8 +20,14 @@ ball$   - All words that end with "ball"
           and 'all' in the 2,3,4 positions. Similarly, search for "^.a.l$" for all 
           4 letter words with 'a' and 'l' in the 2nd and 4th position respectively.  
 ^d...h$ - Search for a word that starts with 'd', ends with 'h', and has 3 characters 
-          between them. If you have a setup such as "D___H" on the scrabble board, 
+          between them. If you have a setup such as "D _ _ _ H" on the scrabble board, 
           this will find all word combinations for you.
+
+Summary
+-------
+^ - 'Caret' implies match from beginning of word
+$ - 'Dollar' implies match to end of word
+. - 'Period' implies a wildcard or 'any' character match
 
 Misc
 ====
