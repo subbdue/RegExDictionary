@@ -21,9 +21,23 @@
         padding-top: 50px;
       }
       .starter-template {
-         padding: 40px 15px;
-         text-align: center;
+        padding: 40px 15px;
+        text-align: center;
       }
+      #row-res {
+        float:left;
+        width:150px;
+        border-style:solid;
+        border-width:1px;
+        word-wrap:break-word;
+      }
+      #result-container {
+        text-align: center;
+      }
+      a:link {color:#FF0000;}    /* unvisited link */
+      /*a:visited {color:#00FF00;} visited link */
+      a:hover {color:#FF00FF;}   /* mouse over link */
+      a:active {color:#0000FF;}  /* selected link */
     </style>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -54,7 +68,6 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
 
@@ -72,14 +85,17 @@
           <input type="text" size="20" name="entry"><br>
           <p></p>
           <!--<input type="button" value="Submit" onclick="loadDict(this.form)">-->
-          <input type="button" class="btn btn-primary" value="Submit" onclick="searchDict(this.form)"><br>
+          <input type="button" class="btn btn-primary" value="Search" onclick="searchDict(this.form)"><br>
         </form>
 
         <p id="results"></p>
-        <h4>Results</h4>
-        <div class=result>
-            <table id=result1 border=1></table>
-        </div>
+
+        <hr>
+        <h4 align="center">Results</h4>
+        <!--<div class="result">
+            <table id=result1 border=1 align="center"></table>
+        </div>-->
+        <div class="result" align="center" id="result-container"></div>
       </div>
 
     </div><!-- /.container -->

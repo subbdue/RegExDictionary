@@ -35,33 +35,33 @@ function searchDict(form) {
     //var input = window.dictContent;
     var rx = form.entry.value;
     var data = window.dictContent;
-    var html = generateTable(data, rx);
-    $('#result1').empty();
-    $('#result1').html(html);
+    var html = generatePrettyTable(data, rx);
+    $('#result-container').empty();
+    $('#result-container').html(html);
 }
 
 function searchDict2() {
     //var input = window.dictContent;
     var rx = document.forms["srchform"]["entry"].value;
     var data = window.dictContent;
-    var html = generateTable(data, rx);
-    $('#result1').empty();
-    $('#result1').html(html);
+    var html = generatePrettyTable(data, rx);
+    $('#result-container').empty();
+    $('#result-container').html(html);
 }
 
 // build HTML table data from an array (one or two dimensional)
-function generateTable(data, rx) {
+function generatePrettyTable(data, rx) {
     var html = '';
     var patt1 = new RegExp(rx, "i");
     if(data[0].constructor === String) {
-        html += '<tr>\r\n';
+        //html += '<tr>\r\n';
         for(var item in data) {
             var mat = patt1.test(data[item]);
             if(mat == true) { 
-                html += '<td>' + data[item] + '</td>\r\n';
+                html += '<div id="row-res"><a href="http://www.wordwebonline.com/search.pl?w=' + data[item] + '" target="_blank">' + data[item] + '</a></div>\r\n';
             } //if
         } //for
-        html += '</tr>\r\n';
+        //html += '</tr>\r\n';
     }   
     return html;
 }
@@ -104,4 +104,20 @@ function example1(dat, rx) {
     var html = generateTable(data, rx);
     $('#result1').empty();
     $('#result1').html(html);
+}
+
+function generateTable(data, rx) {
+    var html = '';
+    var patt1 = new RegExp(rx, "i");
+    if(data[0].constructor === String) {
+        html += '<tr>\r\n';
+        for(var item in data) {
+            var mat = patt1.test(data[item]);
+            if(mat == true) { 
+                html += '<td>' + data[item] + '</td>\r\n';
+            } //if
+        } //for
+        html += '</tr>\r\n';
+    }   
+    return html;
 }
