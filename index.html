@@ -29,6 +29,11 @@
           display: none !important;
         }
       }
+      @media (min-width: 768px) {
+        .hidden-desktop {
+          display: none !important;
+        }
+      }
       #row-res {
         float:left;
         width:150px;
@@ -60,7 +65,7 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle hidden-phone" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -84,7 +89,12 @@
 
     <div class="container">
       <div class="starter-template">
-        <h1>Find That Word</h1>
+        <div class="hidden-phone">
+            <h1>Find That Word</h1>
+        </div>
+        <div class="hidden-desktop">
+            <h2>Find That Word</h2>
+        </div>
         <p class="lead">The Regular Expression Dictionary Search</p>
         <!--From Dutchie's answer-->
         <!--http://stackoverflow.com/questions/1818249/form-with-no-action-and-where-enter-does-not-reload-page -->
